@@ -4,6 +4,12 @@
 
 Asynchronous recursive copying file and directories. Work on Promises. Behavior is similar to `cp -r`
 
+## Installation
+
+```
+npm i recursivedircopy
+```
+
 ## Usage
 
 `copy(SOURCE, DESTINATION[, OPTIONS])`
