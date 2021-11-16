@@ -1,0 +1,18 @@
+{
+  "name": "recursivedircopy",
+  "version": "1.0.0",
+  "description": "Asynchronous recursive file and directories copying with Promise support",
+  "main": "./lib/index.js",
+  "scripts": {
+  	"test": "node ./test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/v131v/recursivedircopy.git"
+  },
+  "keywords": [
+    "copy"
+  ],
+  "author": "v131v",
+  "license": "MIT"
+}
