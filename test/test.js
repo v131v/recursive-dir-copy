@@ -1,7 +1,8 @@
 const cp = require('../lib/index.js');
 const fs = require('fs').promises;
+const path = require('path');
 
-const sourceDir = 'source/', destinationDir = 'destination/';
+const sourceDir = path.join(__dirname, 'source/'), destinationDir =  path.join(__dirname, 'destination/');
 
 const tests = [
 	{
@@ -10,7 +11,7 @@ const tests = [
 		},
 		checkValid: async function(source=sourceDir, destination=destinationDir) {
 
-			const contentsList = await Promise.all([fs.readdir(`${sourceDir}`), fs.readdir(`${destinationDir}${sourceDir}`)]);
+			const contentsList = await Promise.all([fs.readdir(sourceDir), fs.readdir(path.join(destinationDir, 'source'))]);
 
 			let change = {}, checkDirs = [];
 
@@ -77,6 +78,7 @@ try {
 
 	});
 
-} catch(err) {
+} catch (err) {
+	console.error('Test error:');
 	console.error(err);
 }

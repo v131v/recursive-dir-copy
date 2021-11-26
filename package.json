@@ -1,6 +1,6 @@
 {
   "name": "recursivedircopy",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Asynchronous recursive file and directories copying with Promise support",
   "main": "./lib/index.js",
   "scripts": {
